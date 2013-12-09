@@ -1,5 +1,6 @@
 var net = require('net')
 
+var port = process.env.PORT || 1337;
 var chatServer = net.createServer(),
 	clientList = []
 
@@ -54,5 +55,4 @@ function broadcast(message, client){
 	}
 	
 }
-var port = process.env.PORT || 9876;
 chatServer.listen(port);
